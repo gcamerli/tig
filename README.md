@@ -22,7 +22,7 @@ All the data collected from **telegraf** and **influxdb** are stored in the loca
 
 To see **grafana** in action fire up your browser at `172.42.0.4:3000`.
 
-![grafana](img/grafana.png)
+![grafana](https://raw.githubusercontent.com/gcamerli/tig/master/img/grafana.png)
 
 To access to the admin page for the first time you can use `admin` for user and password.
 
@@ -30,7 +30,7 @@ To access to the admin page for the first time you can use `admin` for user and 
 
 To config your dashboard and display beautiful graphs follow the official [Getting started](http://docs.grafana.org/guides/getting_started/) guide.
 
-![temperature](img/display.png)
+![temperature](https://raw.githubusercontent.com/gcamerli/tig/master/img/display.png)
 
 ---
 
