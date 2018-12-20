@@ -1,4 +1,4 @@
-# **TIG [Telgraf, Influxdb, Grafana]**
+# **TIG [Telegraf, Influxdb, Grafana]**
 
 Open Source Summit 2k18 (Paris)
 
@@ -10,6 +10,7 @@ Docker stack to display data published on `iot.eclipse.org` via **[mosquitto](ht
 
 Executing the `run.sh` script docker will:
 
++ cleanup your system :warning:
 + create the bridge network from the `network.sh` script
 + deploy the **tig** stack with `docker-compose`
 
