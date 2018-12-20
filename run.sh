@@ -8,7 +8,15 @@ red='\033[0;31m'
 green='\033[0;32m'
 white='\033[0;m'
 
-# Docker var
+function clean {
+  echo ""
+  echo -e "$green[Start]$white Docker system cleanup"
+  echo ""
+  docker rm -f $(docker ps -aq)
+  docker system prune -f
+  echo ""
+  echo -e "Docker system cleanup ...$green done$white"
+}
 
 function network {
   echo ""
@@ -29,6 +37,7 @@ function compose {
 }
 
 function main () {
+  clean
   network
   compose
 }
