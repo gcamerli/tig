@@ -24,6 +24,8 @@ To see **grafana** in action fire up your browser at `172.42.0.4:3000`.
 
 ![grafana](img/grafana.png)
 
+To access to the admin page for the first time you can use `admin` for user and password.
+
 ---
 
 Happy hacking!
