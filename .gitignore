@@ -1,0 +1,5 @@
+# Telegraf
+config/telegraf.d
+
+# Influxdb
+volumes/influxdb
