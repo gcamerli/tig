@@ -1,0 +1,51 @@
+version: '3.6'
+
+services:
+  telegraf:
+    image: telegraf:latest
+    command: -config /etc/telegraf/telegraf.conf -config-directory /etc/telegraf/telegraf.d
+    restart: always
+    container_name: telegraf
+    hostname: telegraf
+    volumes:
+      - ./volumes/config/telegraf.conf:/etc/telegraf/telegraf.conf:ro
+      - ./volumes/config/telegraf.d:/etc/telegraf/telegraf.d:ro
+    depends_on:
+      - influxdb
+    networks:
+      net:
+        aliases:
+          - telegraf
+        ipv4_address: 172.42.0.2
+
+  influxdb:
+    image: influxdb:latest
+    restart: always
+    container_name: influxdb
+    hostname: influxdb
+    volumes:
+      - ./volumes/config/influxdb.conf:/etc/influxdb/influxdb.conf:ro
+      - ./volumes/influxdb:/var/lib/influxdb:rw
+    networks:
+      net:
+        aliases:
+          - influxdb
+        ipv4_address: 172.42.0.3
+
+  grafana:
+    image: grafana/grafana:latest
+    restart: always
+    container_name: grafana
+    hostname: grafana
+    depends_on:
+      - influxdb
+    networks:
+      net:
+        aliases:
+          - grafana
+        ipv4_address: 172.42.0.4
+
+networks:
+  net:
+    external:
+      name: monitor
