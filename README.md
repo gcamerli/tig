@@ -26,6 +26,12 @@ To see **grafana** in action fire up your browser at `172.42.0.4:3000`.
 
 To access to the admin page for the first time you can use `admin` for user and password.
 
+### **Config**
+
+To config your dashboard and display beautiful graphs follow the official [Getting started](http://docs.grafana.org/guides/getting_started/) guide.
+
+![temperature](img/display.png)
+
 ---
 
 Happy hacking!
